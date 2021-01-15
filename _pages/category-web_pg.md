@@ -1,6 +1,6 @@
 ---
 title: "Web Programming"
 layout: category-web_pg
-permalink: /webpg/
+permalink: /web-programming/
 author_profile: True
 ---
