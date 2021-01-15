@@ -20,7 +20,7 @@ title                    : "민타이의 좌충우돌 코딩생활"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "김민태, Kim Min-Tae"
-description              : "한양대학교 ERICA 전자공학부"
+description              : ""
 url                      : "https://rnintai.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
