@@ -3,8 +3,8 @@ main:
     url: /webpg/
   - title: "Capstone"
     url: /capstone/
-#  - title: "All Posts"
-#    url: /categories/
+  - title: "All Posts"
+    url: /categories/
     
 #  - title: "Tags"
 #    url: /tags/
