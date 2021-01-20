@@ -338,3 +338,52 @@ new Vue({
 
 </html>
 ```
+
+# Computed와 Watch  
+## Computed 속성  
+템플릿 내에 복잡한 연산이 많이 들어가면 코드가 비대해지며 유지보수가 어렵다.
+이를 해소하기 위해 vue instance의 **computed** 속성을 이용한다.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>event_key</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+    {{ reversedMessage }}
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data:{
+    message: 'IEIAEIAO'
+  },
+  methods:{
+
+  },
+  computed:{
+    reversedMessage(){
+      return this.message.split('').reverse().join('')
+    }
+  }
+})
+</script>
+</body>
+
+</html>
+```
+
+메서드를 이용하여 같은 결과를 도출할 수 있다.  
+### computed vs methods  
+ 메서드 혹은 computed를 세 개의 템플릿을 통하여 이용하게 된다고 가정하자.  
+computed 속성의 경우, vue instance가 생성될 때에 미리 결과를 반환해둔다.  
+따라서 **미리 계산된 computed 속성**을 가져오기만 하면 된다.  
+또한 중간에 data의 값이 변경된 경우, computed의 계산이 다시 이루어 진다.
+ 반면에 methods의 경우는 **호출될 때마다** 결과를 계산하여 반환한다.
