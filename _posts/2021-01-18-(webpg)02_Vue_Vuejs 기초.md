@@ -104,11 +104,11 @@ data: {
 }
 ```
 
-`v-bind:`라는 예약어를 통하여 바인딩을 해줄 수 있다.  
+`v-bind:`라는 디렉티브를 통하여 바인딩을 해줄 수 있다.  
 더 간단히 `v-bind`를 생략하고 `:`만 붙여주어도 바인딩을 할 수 있다.
 
 # Event  
-## Button을 이용  
+## Button 이용 예제  
 ```html
 <!DOCTYPE html>
 <html>
@@ -148,9 +148,9 @@ new Vue({
 </html>
 ```  
 button이 클릭될 때의 이벤트를 처리할 때의 바인딩은  
-`v-on:` 키워드를 이용한다.
+`v-on:` 혹은 `@` 키워드를 이용한다.
 
-# form과 submit 예제
+## form과 submit 예제
 ```html
 <!DOCTYPE html>
 <html>
@@ -219,4 +219,122 @@ Vue는 이벤트 핸들러 내부에서 자주 호출되는 메서드들을 수�
 - `.left`  
 - `.right`  
 
+```html
+<input v-on:keyup.enter="submit">
+```
 
+### 시스템 키 수식어  
+- `.ctrl`  
+- `.shift`  
+- `.alt`  
+- `.meta`(윈도우 키 혹은 Mac의 command키)  
+
+```html
+<!-- Alt + C -->
+<input @keyup.alt.67="clear">
+
+<!-- Ctrl + Click -->
+<div @click.ctrl="doSomething">Do something</div>
+```
+
+#### +`.exact` 수식어
+다른 시스템 수식어와 조합하여도 실행되는 것을 방지  
+정확한 키 조합을 눌러야 핸들러가 실행된다.
+
+```html
+<!-- Alt 또는 Shift와 함께 눌린 경우에도 실행됩니다. -->
+<button @click.ctrl="onClick">A</button>
+
+<!-- Ctrl 키만 눌려있을 때만 실행됩니다. -->
+<button @click.ctrl.exact="onCtrlClick">A</button>
+
+<!-- 아래 코드는 시스템 키가 눌리지 않은 상태인 경우에만 작동합니다. -->
+<button @click.exact="onClick">A</button>
+```
+
+### 키 코드 확인 예제
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>event_key</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+    <input @keyup="key_check">
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data:{
+    
+  },
+  methods:{
+    submitted(){
+      alert('submitted!');
+    },
+    key_check(event){
+      console.log(event.keyCode);
+    }
+  }
+})
+</script>
+</body>
+
+</html>
+```
+
+input박스에 키를 입력하면 로그 창을 통해  
+키 코드를 확인할 수 있다.  
+
+---
+
+[Vue.js 가이드: 이벤트](https://kr.vuejs.org/v2/guide/events.html)
+
+# 양 방향 바인딩  
+**양 방향 바인딩**이란 `Vue 인스턴스 <-> template`  
+의 느낌으로 쌍방향으로 데이터에 접근할 수 있도록 하는 것이다.
+
+`v-model` 디렉티브를 통해 할 수 있다.
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>event_key</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+    <!-- <input type="text" :value="text" @keyup="updateText"><br> -->
+    <input type="text" v-model="text"><br>
+    {{ text }}
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data:{
+    text: ''
+  },
+  methods:{
+    // updateText(event){
+    //   var t = event.target.value;
+    //   console.log(t);
+    //   this.text = t;
+    // }
+  }
+})
+</script>
+</body>
+
+</html>
+```
