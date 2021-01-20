@@ -148,7 +148,7 @@ new Vue({
 </html>
 ```  
 button이 클릭될 때의 이벤트를 처리할 때의 바인딩은  
-`v-on:click`을 이용한다.
+`v-on:` 키워드를 이용한다.
 
 # form과 submit 예제
 ```html
@@ -187,6 +187,36 @@ new Vue({
 </html>
 ```
 
-**참고**form은 기본적으로 submit했을 때에 페이지를 다시 불러온다.
+**참고** form은 기본적으로 submit했을 때에 페이지를 다시 불러온다.
+
+## 이벤트 수식어  
+Vue는 이벤트 핸들러 내부에서 자주 호출되는 메서드들을 수식어로 지원한다.  
+**이벤트 수식어**는`v-on`이벤트 뒤에 접미사처럼 사용한다.  
+  
+- `.stop`: 상위 element들로의 **이벤트 전파**를 중단시킴  
+- `.prevent`: 해당 element의 **고유 동작**을 중단시킴  
+- `.capture`  
+- `.self`  
+- `.once`  
+- `.passive`  
+
+## 키 수식어  
+키보드의 키 입력에 대한 이벤트를 처리할 수 있다.  
+
+### 키 이벤트  
+- `keydown`: 키 입력 시 발생  
+- `keypress`: 키 입력 시 발생. 특수키에는 반응 없음  
+- `keyup`: 키가 release될 때에 발생  
+
+### 키 코드  
+- `.enter`  
+- `.tap`  
+- `.delete`(Backspace 키도 캡쳐)  
+- `.esc`  
+- `.space`  
+- `.up`  
+- `.down`  
+- `.left`  
+- `.right`  
 
 
