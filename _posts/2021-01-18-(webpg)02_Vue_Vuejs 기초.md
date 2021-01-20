@@ -7,7 +7,7 @@ toc: true #Table of Contents
 comments: true
 ---
 
-[Vue.js 기초](https://www.youtube.com/watch?v=bxxZmYUpg6M&list=PLB7CpjPWqHOtYP7P_0Ls9XNed0NLvmkAh&index=2)
+[코지코더님의 Vue.js 기초](https://www.youtube.com/watch?v=bxxZmYUpg6M&list=PLB7CpjPWqHOtYP7P_0Ls9XNed0NLvmkAh&index=2)
 
 # Vue instance
 ```html
@@ -106,4 +106,87 @@ data: {
 
 `v-bind:`라는 예약어를 통하여 바인딩을 해줄 수 있다.  
 더 간단히 `v-bind`를 생략하고 `:`만 붙여주어도 바인딩을 할 수 있다.
+
+# Event  
+## Button을 이용  
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>event_demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+  {{ year }}<br>
+  <button v-on:click="add">더하기</button>
+  <button v-on:click="sub">빼기</button>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data:{
+    year: 2021
+  },
+  methods:{
+    add(){
+      this.year++;
+    },
+    sub(){
+      this.year--;
+    }
+
+  }
+})
+</script>
+</body>
+
+</html>
+```  
+button이 클릭될 때의 이벤트를 처리할 때의 바인딩은  
+`v-on:click`을 이용한다.
+
+# form과 submit 예제
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>event_demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+  <form v-on:submit="submit">
+    <input type="text"><br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data:{
+    
+  },
+  methods:{
+    submit(){
+      alert('submitted!');
+    }
+  }
+})
+</script>
+</body>
+
+</html>
+```
+
+**참고**form은 기본적으로 submit했을 때에 페이지를 다시 불러온다.
+
 
