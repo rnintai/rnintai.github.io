@@ -1,5 +1,5 @@
 ---
-title: "02 Vue.js 기초"
+title: "02 Vue.js 기초 (1)"
 categories: 
   - Web Programming
 last_modified_at: 2021-01-18 15:23:00
