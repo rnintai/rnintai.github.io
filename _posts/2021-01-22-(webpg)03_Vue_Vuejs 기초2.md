@@ -70,7 +70,7 @@ new Vue({
 `data`에 **객체**로 클래스의 내용을 선언.
 
 ```html
-<div :class='classObject'></div>
+<div :class="classObject"></div>
 ```
 ```html
 data: {
@@ -125,6 +125,7 @@ new Vue({
 </html>
 ```
 ## 객체 바인딩
+```html
 <!DOCTYPE html>
 <html>
 
@@ -157,4 +158,4 @@ new Vue({
 </body>
 
 </html>
-
+```
