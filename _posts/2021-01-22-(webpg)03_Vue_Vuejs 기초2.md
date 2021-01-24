@@ -257,6 +257,21 @@ new Vue({
 기본적으로 vue에서 배열은 **대괄호**로 감싸고, **쉼표**로 구분하여 표현한다.
 
 `v-for`을 사용하면 배열을 **반복 접근**할 때 용이하다.
+`v-for`의 속성 값은 `변수명 in(of) 배열`로 표현한다.
+
+두 번째 인자를 통하여 `index`에 접근 가능하다.
+```html
+<div v-for="(a, index) in people"> ... </div>
+```
+
+`key`속성을 **가능하면** 넣어 주어야 한다.
+`key`는 DB의 `id`값 처럼 각 항목이 고유한 값을 가져야 한다. 
+
+```html
+<div v-for="person in people" :key="person.age + '-' + person.age"> ... </div>
+```
+
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -293,3 +308,23 @@ new Vue({
 
 </html>
 ```
+
+## v-for와 객체  
+`v-for`은 객체와도 친하다.  
+객체의 속성을 반복할 수 있으며
+
+두 번째 인자를 통하여 `key` 및 `index`에 접근 가능하다.  
+
+```html
+<div v-for="(value, name) in object">
+  {{ name }}: {{ value }}
+</div>
+```
+
+```html
+<div v-for="(value, name, index) in object">
+  {{ index }}. {{ name }}: {{ value }}
+</div>
+```
+
+[참고](https://kr.vuejs.org/v2/guide/list.html)
