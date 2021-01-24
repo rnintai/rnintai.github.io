@@ -105,7 +105,7 @@ data: {
 
 <body>  
 <div id="app">
-  <div :style="{ styleObject }">Hello</div>
+  <div :style="{ color: activeColor, fontSize: fontSize + 'px' }">Hello</div>
   <!-- 여러 단어는 camelCase 사용-->
 </div>
 
@@ -113,7 +113,8 @@ data: {
 new Vue({
   el: '#app',
   data:{
-   s
+    activeColor: 'red',
+    fontSize: 30
   },
   methods:{
     
@@ -152,6 +153,139 @@ new Vue({
   },
   methods:{
     
+  }
+})
+</script>
+</body>
+
+</html>
+```
+
+# v-if와 v-show  
+## v-if  
+조건문의 용도. else 사용 가능  
+여러 요소의 렌더링에 대한 조건을 걸고 싶을 경우, `<template>`을 사용하자
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>v-if & v-show</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+  <template v-if="show">
+    <div>Yes1</div>
+    <div>Yes2</div>
+    <div>Yes3</div>
+  </template>
+  <template v-else>
+    <div>No1</div>
+    <div>No2</div>
+    <div>No3</div>
+  </template>
+  <button @click="update">toggle</button>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    show: true
+  },
+  methods:{
+    update(){
+      this.show = !this.show;
+    }
+  }
+})
+</script>
+</body>
+
+</html>
+```
+
+# v-else와 v-else-if
+`v-if` 이외의 경우들의 조건을 걸어 줄 때에 사용한다.
+
+## v-show  
+`v-show`는 해당 속성의 불 값에 따라 **렌더링 여부**를 결정한다.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>v-show</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+  <div v-show="show">show</div>  
+  <button @click="update">toggle</button>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    show: true
+  },
+  methods:{
+    update(){
+      this.show = !this.show;
+    }
+  }
+})
+</script>
+</body>
+
+</html>
+```
+
+## v-if vs. v-show
+`v-if`는 토글의 비용이 높고, `v-show`는 초기 렌더링의 비용이 더 높다.  
+이러한 특징을 고려하여, **토글이 잦은 경우** `v-show`를 사용하는 것이 좋고,  
+**런타임 내에 변화가 적은 경우** `v-if`를 사용하자.
+
+# v-for 리스트 렌더링
+기본적으로 vue에서 배열은 **대괄호**로 감싸고, **쉼표**로 구분하여 표현한다.
+
+`v-for`을 사용하면 배열을 **반복 접근**할 때 용이하다.
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>v-show</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>  
+<div id="app">
+  <div v-for="a in people">
+    {% raw %}{{ a.name }} {{ a.age }}{% endraw %}
+  </div>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    people: [
+      { name: 'a', age: 20 },
+      { name: 'b', age: 21 },
+      { name: 'c', age: 22 },
+      { name: 'd', age: 23 },
+    ]
+  },
+  methods:{
   }
 })
 </script>
