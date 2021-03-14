@@ -21,4 +21,22 @@ HTML을 시각적으로 보기 좋게 Style을 부여하기 위함.
 h1 {color:red}
 ```
 
+속성들 간의 구분자는 `;`이다.  
+```html
+    h1,h2 {
+      color:red;
+      font-size:10px
+    }
+```
 
+하위 태그 지정 시 공백으로 하면 됨.  
+```html
+    header h1{
+      border:1px solid red;
+    }
+```
+
+한 속성의 내용의 구분도 공백으로 한다.  
+```html
+      border: 1px red solid;
+```
