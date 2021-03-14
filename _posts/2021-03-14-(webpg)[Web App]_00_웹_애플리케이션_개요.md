@@ -51,12 +51,21 @@ HTTP라는 규약을 이용하여 HTML언어로 된 웹페이지를 주고받는
 ```
 `<시작태그>컨텐츠</끝태그>`의 문법을 사용.
 
-## a 태그
+## a 태그 (링크)
 링크를 달 때에 사용.  
 `<a href="http://rnintai.github.io">민타이</a>`  
 
 **새 창에서 열기**  
-: target의 속성 값을 \_blank로 지정.  
+ target의 속성 값을 \_blank로 지정.  
 `<a href="http://rnintai.github.io" target="_blank">민타이</a>`  
 
-**참고**: 태그의 속성은 공백으로 구분
+**참고** 태그의 속성은 공백으로 구분  
+
+## li 태그 (리스트)
+`<li>내용</li>`을 통해 리스트 작성.  
+
+`<ol></ol>`은 ordered list이고,  
+`<ul></ul>`은 unordered list이다.  
+
+**주의** 리스트 태그는 body태그 내에 존재해야 함.
+
