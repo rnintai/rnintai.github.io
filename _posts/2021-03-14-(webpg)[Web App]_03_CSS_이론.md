@@ -40,3 +40,25 @@ h1 {color:red}
 ```html
       border: 1px red solid;
 ```
+
+id에 style을 부여하려면 `#`을 앞에 붙여줌  
+```html
+    #selected {
+      border: 1px red solid;
+    }
+```
+
+## border, 박스 모델  
+![image](https://user-images.githubusercontent.com/65759076/111065169-b0a20d00-84fb-11eb-9b5f-03e224face83.png)  
+[출처](https://youtu.be/6K-WMWP_94Q?list=PLuHgQVnccGMAE4Sn_SYvMw5-qEADJcU-X&t=787)  
+
+크롬 브라우저의 개발자 도구를 통해 자세히 확인 가능.  
+
+# float
+## 이미지 태그
+`<img src="url" />`을 통해 이미지를 띄울 수 있음  
+
+## float 속성
+`float: left`
+예를 들어 이미지와 텍스트를 어우러지게 하기 위한 속성이다.
+
