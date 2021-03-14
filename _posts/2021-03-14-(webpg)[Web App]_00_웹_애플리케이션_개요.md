@@ -52,11 +52,11 @@ HTTP라는 규약을 이용하여 HTML언어로 된 웹페이지를 주고받는
 `<시작태그>컨텐츠</끝태그>`의 문법을 사용.
 
 ## a 태그
-링크를 달 때에 사용.
-`<a href="http://rnintai.github.io">민타이</a>`
+링크를 달 때에 사용.  
+`<a href="http://rnintai.github.io">민타이</a>`  
 
-새 창에서 열기
-: target의 속성 값을 \_blank로 지정.
-`<a href="http://rnintai.github.io" target="_blank">민타이</a>`
+**새 창에서 열기**  
+: target의 속성 값을 \_blank로 지정.  
+`<a href="http://rnintai.github.io" target="_blank">민타이</a>`  
 
-`참고` 태그의 속성은 공백으로 구분
+**참고**: 태그의 속성은 공백으로 구분
