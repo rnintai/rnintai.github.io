@@ -41,5 +41,22 @@ HTTP라는 규약을 이용하여 HTML언어로 된 웹페이지를 주고받는
 1. 웹브라우저(Client)가 서버에 서비스를 요청함.
 2. 서버는 이에 응답한다.
 
-# localhost
+# 내부 동작 과정
 ![image](https://user-images.githubusercontent.com/65759076/111058259-a4ed2100-84d0-11eb-822f-c0921bdce83c.png)
+[출처]https://www.youtube.com/watch?v=3Ng9X1QYFaA&list=PLuHgQVnccGMAE4Sn_SYvMw5-qEADJcU-X&index=8
+
+# HTML 태그
+```html
+안녕하세요. <strong>민타이</strong>입니다.
+```
+`<시작태그>컨텐츠</끝태그>`의 문법을 사용.
+
+## a 태그
+링크를 달 때에 사용.
+`<a href="http://rnintai.github.io">민타이</a>`
+
+새 창에서 열기
+: target의 속성 값을 \_blank로 지정.
+`<a href="http://rnintai.github.io" target="_blank">민타이</a>`
+
+`참고` 태그의 속성은 공백으로 구분
