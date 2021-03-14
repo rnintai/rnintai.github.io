@@ -43,7 +43,7 @@ HTTP라는 규약을 이용하여 HTML언어로 된 웹페이지를 주고받는
 
 # 내부 동작 과정
 ![image](https://user-images.githubusercontent.com/65759076/111058259-a4ed2100-84d0-11eb-822f-c0921bdce83c.png)
-[출처]https://www.youtube.com/watch?v=3Ng9X1QYFaA&list=PLuHgQVnccGMAE4Sn_SYvMw5-qEADJcU-X&index=8
+[출처](https://www.youtube.com/watch?v=3Ng9X1QYFaA&list=PLuHgQVnccGMAE4Sn_SYvMw5-qEADJcU-X&index=8)
 
 # HTML 태그
 ```html
