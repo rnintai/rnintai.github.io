@@ -67,5 +67,17 @@ HTTP라는 규약을 이용하여 HTML언어로 된 웹페이지를 주고받는
 `<ol></ol>`은 ordered list이고,  
 `<ul></ul>`은 unordered list이다.  
 
-**주의** 리스트 태그는 body태그 내에 존재해야 함.
+**주의** 리스트 태그는 body태그 내에 존재해야 함.  
+head태그 내에는 meta charset을 utf-8로 해주어야 함.
+덧붙여 title태그를 사용하여 페이지 제목을 바꿀 수 있음.  
 
+# DOCTYPE
+HTML5를 사용한다면 `<!DOCTYPE html>`을 맨 위에 명시.
+
+# HTML 태그 사전
+[w3c 제공](http://dev.w3.org/html5/html-author/)
+[opentutorials](http://opentutorials.org/course/1058)
+
+# HTML의 목적
+어떠한 정보를 사람, 컴퓨터 모두 이해할 수 있게 태그를 이용하여 정의하는 것.  
+시각적, 디자인 적인 것은 css를 통해 분리하여 작성.
