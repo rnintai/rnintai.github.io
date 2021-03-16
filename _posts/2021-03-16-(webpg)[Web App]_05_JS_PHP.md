@@ -62,10 +62,10 @@ JS는 웹브라우저(클라이언트)에서 해석하여 화면에 반영하기
 
 # 디버그  
 ## JavaScript 디버그
-크롬 기준 관리자 도구의 콘솔 (`Ctrl+Shift+J`)을 이용  
+크롬 기준 관리자 도구의 콘솔, `Ctrl+Shift+J`을 이용  
 
 ## PHP 디버그
-`wamp\apache2\htdocs\logs\error.log`의 맨 아래에 로깅되어있다.  
+`C:\Bitnami\wampstack-8.0.3-0\apache2\htdocs\logs\error.log`의 맨 아래에 로깅되어있다.  
 
 ## 화면에서 확인하는 방법  
 `C:\Bitnami\wampstack-8.0.3-0\php\php.ini`에서  
