@@ -1,5 +1,5 @@
 ---
-title: "[Web App] 05. JavaScript, PHP 프로그래밍"
+title: "[Web App] 05. JavaScript, PHP"
 categories: 
   - Web Programming
 last_modified_at: 2021-03-14 15:23:00
