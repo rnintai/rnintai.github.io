@@ -7,7 +7,7 @@ toc: true #Table of Contents
 comments: true
 ---
 # 참고
-[php파일 반영 delay 줄이기](https://hack.pe.kr/373)
+[php파일 반영 delay 줄이기](https://hack.pe.kr/373)  
 `php.ini`에서 `opcache.enable = 0`으로 수정.  
 서버 재시작 잊지 말기  
 
@@ -36,7 +36,9 @@ PHP가 있으면 공통적인 부분을 수정할 때에 PHP파일만 수정해�
 **출력** `echo "~";`  
 
 ## JavaScript
-기본 시작은 `<script> ~ </script>`로 한다.  
+기본 시작은 `<script> ~ </script>`로 한다.   
+
+**출력** `document.write("~");`
 
 ## 차이점  
 ![image](https://user-images.githubusercontent.com/65759076/111329637-99f1e680-86b2-11eb-9f6e-112620f6fa55.png)
