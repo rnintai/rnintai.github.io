@@ -7,7 +7,7 @@ toc: true #Table of Contents
 comments: true
 ---
 # 참고
-[php파일 반영 delay 줄이기](https://hack.pe.kr/373)  
+[php 반영 delay 줄이기](https://hack.pe.kr/373)  
 `php.ini`에서 `opcache.enable = 0`으로 수정.  
 서버 재시작 잊지 말기  
 
