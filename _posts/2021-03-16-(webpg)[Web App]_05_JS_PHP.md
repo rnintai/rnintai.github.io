@@ -75,7 +75,16 @@ JS는 웹브라우저(클라이언트)에서 해석하여 화면에 반영하기
 
 # 변수  
 ## JavaScript
-`var = data`의 문법
+**문법**`var = data`
 
 ## PHP
-`$var = data`의 문법
+**문법** `$var = data`
+
+
+# 비교  
+기본적으로 `==` `!=` `>` `<`을 이용한다.  
+다만 JavaScript의 경우 결과를 `document.write();`를 통해 확인할 수 있고,  
+PHP의 경우 `var_dump();`를 통하여 확인 가능.
+
+
+#
